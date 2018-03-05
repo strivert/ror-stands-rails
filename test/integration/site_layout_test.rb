@@ -1,5 +1,8 @@
 require 'test_helper'
 
+# rails generate integration_test site_layout
+# rails test:integration
+
 class SiteLayoutTest < ActionDispatch::IntegrationTest
 
   test "layout links" do
