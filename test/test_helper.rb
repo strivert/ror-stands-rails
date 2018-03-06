@@ -7,7 +7,11 @@ Minitest::Reporters.use!
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
-  include ApplicationHelper
+  include ApplicationHelper # ok to use the full_title helper in the tests by including the Applicationhelper into this test helper
 
   # Add more helper methods to be used by all tests here...
+
+  def is_logged_in?
+    !session[:user_id].nil?
+  end
 end

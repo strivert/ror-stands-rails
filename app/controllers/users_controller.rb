@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params) #{"name"=>"myName", "email"=>"my@email.com", "password"=>"123123", "password_confirmation"=>"123123"}    
     if @user.save
+      log_in @user
       # Handle a successful save.
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user # redirect_to user_url(@user) = Get /users/3 = Get user_path(user) = show action, also think about user_path(@user)

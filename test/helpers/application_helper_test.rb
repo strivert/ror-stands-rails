@@ -1,6 +1,6 @@
 require 'test_helper'
 
-# rails test:helpers
+# rails test:helpers  so that confirm if we can use full_title from ApplicatonHelper
 
 class ApplicationHelperTest < ActionView::TestCase
   test "full title helper" do
