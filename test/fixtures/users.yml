@@ -3,3 +3,8 @@ kyc:
   name: kyc
   email: kyc@kyc.com
   password_digest: <%= User.digest('123123') %>
+  admin: true
+kyc1:
+  name: kyc1
+  email: kyc1@kyc1.com
+  password_digest: <%= User.digest('123123') %>

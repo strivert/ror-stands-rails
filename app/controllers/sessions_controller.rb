@@ -10,7 +10,9 @@ class SessionsController < ApplicationController
       #remember user # remember is from ../helpers/sessions_helper.rb
       # if remember is checked = rmember(user) or if unchecked, forget(user)
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-      redirect_to current_user # user_url(user) => show action
+      
+      #redirect_to current_user # user_url(user) => show action
+      redirect_back_or user # in helpers/sessions_helper.rb, for friendly forwarding
     else
       # Create an error message.
       flash.now[:danger] = 'Invalid email/password combination'
