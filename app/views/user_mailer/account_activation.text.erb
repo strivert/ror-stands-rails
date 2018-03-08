@@ -1,0 +1,8 @@
+# rails generate mailer UserMailer account_activation password_reset
+# This is view template for Plain-text email
+
+Hi <%= @user.name %>,
+
+Welcome to the Sample App! Click on the link below to activate your account:
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>

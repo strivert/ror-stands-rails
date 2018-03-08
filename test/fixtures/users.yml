@@ -4,7 +4,11 @@ kyc:
   email: kyc@kyc.com
   password_digest: <%= User.digest('123123') %>
   admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
 kyc1:
   name: kyc1
   email: kyc1@kyc1.com
   password_digest: <%= User.digest('123123') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
